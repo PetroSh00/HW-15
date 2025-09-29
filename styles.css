@@ -1,0 +1,29 @@
+.holder {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "a a a b b b"
+    "c c d d e e";
+  border: 4px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 600px;
+  height: 200px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Прив’язка блоків */
+.item:nth-child(1) { grid-area: a; background: tomato; }
+.item:nth-child(2) { grid-area: d; background: steelblue; }
+.item:nth-child(3) { grid-area: c; background: purple; }
+.item:nth-child(4) { grid-area: e; background: green; }
+.item:nth-child(5) { grid-area: b; background: orange; }
